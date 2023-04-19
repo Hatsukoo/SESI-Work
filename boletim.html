@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+<head>
+<meta charset=”UTF-8″>
+<title>Boletim Escolar</title>
+</head>
+<body>
+<h1 style="text-align:center;">BOLETIM ESCOLAR</h1>
+<table border="1" style="text-align:center;" width="600">
+  <thead>
+    <!--Linha de Título-->
+    <tr>
+      <th scope="row" style="text-align: left;">Bimeste</th>
+      <th scope="row" style="text-align: left;">Matemática</th>
+      <th scope="row" style="text-align: left;">Física</th>
+      <th scope="row" style="text-align: left;">Biologia</th>
+      <th scope="row" style="text-align: left;">Química</th>
+      <th scope="row" style="text-align: left;">Sociologia</th>
+      <th scope="row" style="text-align: left;">Filosofia</th>
+      <th scope="row" style="text-align: left;">História</th>
+      <th scope="row" style="text-align: left;">Geografia</th>
+      <th scope="row" style="text-align: left;">Português</th>
+      <th scope="row" style="text-align: left;">Literatura</th>
+      <th scope="row" style="text-align: left;">Redação</th>
+      <th scope="row" style="text-align: left;">Artes</th>
+      <th scope="row" style="text-align: left;">Educação Física</th>
+      <th scope="row" style="text-align: left;">Projeto de Vida</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <!--Linha da tabela primeiro bimestre-->
+      <td><b>Primeiro</b></td>
+      <td>76,5</td>
+      <td>80,5</td>
+      <td>62</td>
+      <td>82</td>
+      <td>95</td>
+      <td>82,5</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>92,5</td>
+      <td>90</td>
+      <td>100</td>
+    </tr>
+    <tr>
+    <!--Linha da tabela segundo bimestre-->
+      <td><b>Segundo</b></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+    <td><b>Terceiro</b></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td> 
+    </tr>
+    <tr>
+  <td><b>Quarto</b></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+        
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h2><mark>Calcular a nota</mark></h2>
+<p>Pra calcular a nota, voce precisa pegar<br>
+   as notas das ADs, somar com a nota da prova.<br>
+   Caso tiver nota extra, adicionar na soma.<br>
+   Por fim, o resultado é dividido por 2</p>
+   <p><b>Fórmula: NF= <sup>Ads+Pr</sup>/<sub>2</sub></b>
+   <hr>
+</p>
+<!--Calculadora de Nota Final(JavaScript)-->
+	
+    <h1>Calculadora de NF</h1>
+
+	<label for="ads">ADs:</label>
+	<input type="number" id="ads"><br><br>
+
+	<label for="pr">Prova:</label>
+	<input type="number" id="pr"><br><br>
+
+	<button onclick="calcular()">Calcular</button><br><br>
+
+	<label for="nf">NF:</label>
+	<span id="resultado"></span><br><br>
+
+	<script>
+		function calcular() {
+			// Obter os valores de ADs e Prova a partir das caixas de texto
+			var ads = document.getElementById("ads").value;
+			var prova = document.getElementById("pr").value;
+
+			// Converter os valores para números de ponto flutuante
+			ads = parseFloat(ads);
+			prova = parseFloat(prova);
+
+			// Calcular o valor de NF
+			var nf = (ads + prova) / 2;
+
+			// Exibir o resultado na página
+			document.getElementById("resultado").innerHTML = nf;
+		}
+	</script>
+	<hr>
+</body>
+</html>
